@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跳一跳</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🎮 跳一跳</h1>
+        
+        <div class="game-info">
+            <div class="info-item">
+                <span class="label">当前分数</span>
+                <span class="value" id="score">0</span>
+            </div>
+            <div class="info-item">
+                <span class="label">最高分数</span>
+                <span class="value" id="highScore">0</span>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div class="game-over" id="gameOver">
+            <h2>游戏结束!</h2>
+            <p>得分: <span id="finalScore">0</span></p>
+            <button class="btn-restart" onclick="restartGame()">再来一局</button>
+        </div>
+
+        <div class="controls">
+            <button class="btn-restart" id="restartBtn">重新开始</button>
+            <button class="btn-home" onclick="goHome()">返回首页</button>
+        </div>
+
+        <div class="instructions">
+            <p>按住鼠标/触摸蓄力，松开跳跃</p>
+            <p>落在方块中心得2分，落在边缘得1分</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

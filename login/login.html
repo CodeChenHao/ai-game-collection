@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>欢迎回来</h1>
+                <p>登录您的账户以继续</p>
+            </div>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">邮箱</label>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="请输入邮箱">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" required autocomplete="current-password" placeholder="请输入密码">
+                        <button type="button" class="toggle-password" onclick="togglePassword()" title="显示/隐藏密码">👁️</button>
+                    </div>
+                </div>
+                
+                <div class="form-group captcha-group">
+                    <label for="captcha">验证码</label>
+                    <div class="captcha-input-wrapper">
+                        <input type="text" id="captcha" name="captcha" required placeholder="请输入验证码" maxlength="4">
+                        <canvas id="captchaCanvas" width="120" height="40" title="点击刷新验证码"></canvas>
+                    </div>
+                </div>
+                
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span>记住我</span>
+                    </label>
+                    <a href="../forgot-password/forgot-password.html" class="forgot-password">忘记密码？</a>
+                </div>
+                
+                <button type="submit" class="login-btn">
+                    <span class="btn-text">登录</span>
+                    <span class="btn-loader"></span>
+                </button>
+            </form>
+            
+            <div class="login-footer">
+                <p>还没有账户？<a href="../register/register.html" class="register-link">立即注册</a></p>
+            </div>
+        </div>
+        
+        <div class="background-decoration">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+        </div>
+    </div>
+    
+    <div id="toast" class="toast"></div>
+    
+    <script src="login.js"></script>
+</body>
+</html>

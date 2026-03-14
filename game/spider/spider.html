@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蜘蛛纸牌</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🕷️ 蜘蛛纸牌</h1>
+        
+        <div class="game-info">
+            <div class="info-item">
+                <span class="label">得分</span>
+                <span class="value" id="score">500</span>
+            </div>
+            <div class="info-item">
+                <span class="label">移动次数</span>
+                <span class="value" id="moves">0</span>
+            </div>
+            <div class="info-item">
+                <span class="label">完成组数</span>
+                <span class="value" id="completed">0/8</span>
+            </div>
+        </div>
+
+        <div class="difficulty-selector">
+            <button class="diff-btn active" data-suits="1">单花色</button>
+            <button class="diff-btn" data-suits="2">双花色</button>
+            <button class="diff-btn" data-suits="4">四花色</button>
+        </div>
+
+        <div class="game-area">
+            <div class="stock-area">
+                <div class="stock-pile" id="stockPile" onclick="dealCards()">
+                    <div class="card back">🂠</div>
+                    <span class="stock-count" id="stockCount">5</span>
+                </div>
+                <div class="completed-area" id="completedArea"></div>
+            </div>
+            
+            <div class="tableau" id="tableau"></div>
+        </div>
+
+        <div class="controls">
+            <button class="btn-undo" id="undoBtn" disabled>撤销</button>
+            <button class="btn-hint" id="hintBtn">提示</button>
+            <button class="btn-restart" id="restartBtn">重新开始</button>
+            <button class="btn-home" id="homeBtn" onclick="goHome()">返回首页</button>
+        </div>
+
+        <div class="instructions">
+            <p>拖拽移动牌组 | 点击牌堆发牌 | 同花色降序排列可移动</p>
+            <p>完成K到A的同花色序列自动收集</p>
+        </div>
+    </div>
+
+    <div class="win-message" id="winMessage">
+        <h2>🎉 恭喜获胜！</h2>
+        <p>最终得分: <span id="finalScore">0</span></p>
+        <p>移动次数: <span id="finalMoves">0</span></p>
+        <button class="btn-restart" onclick="restartGame()">再玩一局</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

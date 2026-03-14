@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>GameHub</span>
+            </div>
+            <div class="nav-user">
+                <span id="userEmail"></span>
+                <button class="logout-btn" onclick="logout()">退出登录</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="welcome-section">
+            <h1>欢迎回来！</h1>
+            <p id="welcomeText">开始您的游戏之旅</p>
+        </div>
+
+        <div class="games-grid">
+            <div class="game-card" onclick="playGame('snake')">
+                <div class="game-icon">🐍</div>
+                <h3>贪吃蛇</h3>
+                <p>经典的贪吃蛇游戏，控制蛇的移动，吃掉食物，避免撞墙</p>
+                <button class="play-btn">开始游戏</button>
+            </div>
+
+            <div class="game-card" onclick="playGame('aircraft')">
+                <div class="game-icon">✈️</div>
+                <h3>飞机大战</h3>
+                <p>刺激的飞机大战游戏，发射子弹消灭敌机</p>
+                <button class="play-btn">开始游戏</button>
+            </div>
+
+            <div class="game-card" onclick="playGame('gomoku')">
+                <div class="game-icon">⚫</div>
+                <h3>五子棋</h3>
+                <p>经典五子棋游戏，横竖斜连成五子获胜</p>
+                <button class="play-btn">开始游戏</button>
+            </div>
+
+            <div class="game-card" onclick="playGame('2048')">
+                <div class="game-icon">🎮</div>
+                <h3>2048</h3>
+                <p>经典数字合并游戏，目标是达到2048</p>
+                <button class="play-btn">开始游戏</button>
+            </div>
+
+            <div class="game-card" onclick="playGame('tetris')">
+                <div class="game-icon">🧱</div>
+                <h3>俄罗斯方块</h3>
+                <p>经典俄罗斯方块，消除行得分</p>
+                <button class="play-btn">开始游戏</button>
+            </div>
+
+            <div class="game-card" onclick="playGame('minesweeper')">
+                <div class="game-icon">💣</div>
+                <h3>扫雷</h3>
+                <p>经典扫雷游戏，找出所有地雷</p>
+                <button class="play-btn">开始游戏</button>
+            </div>
+
+            <div class="game-card" onclick="playGame('spider')">
+                <div class="game-icon">🕷️</div>
+                <h3>蜘蛛纸牌</h3>
+                <p>经典蜘蛛纸牌，完成8组同花色序列</p>
+                <button class="play-btn">开始游戏</button>
+            </div>
+
+            <div class="game-card" onclick="playGame('sheep')">
+                <div class="game-icon">🐑</div>
+                <h3>羊了个羊</h3>
+                <p>消除游戏，三个相同图案自动消除</p>
+                <button class="play-btn">开始游戏</button>
+            </div>
+
+            <div class="game-card" onclick="playGame('jump')">
+                <div class="game-icon">🦘</div>
+                <h3>跳一跳</h3>
+                <p>蓄力跳跃，落在方块上得分</p>
+                <button class="play-btn">开始游戏</button>
+            </div>
+
+            <div class="game-card" onclick="playGame('sokoban')">
+                <div class="game-icon">📦</div>
+                <h3>推箱子</h3>
+                <p>经典推箱子，将箱子推到目标位置</p>
+                <button class="play-btn">开始游戏</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="home.js"></script>
+</body>
+</html>

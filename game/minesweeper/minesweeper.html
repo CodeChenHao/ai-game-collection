@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扫雷</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>💣 扫雷</h1>
+        
+        <div class="game-info">
+            <div class="info-item">
+                <span class="label">剩余地雷</span>
+                <span class="value" id="minesLeft">10</span>
+            </div>
+            <div class="info-item">
+                <span class="label">用时</span>
+                <span class="value" id="timer">000</span>
+            </div>
+        </div>
+
+        <div class="difficulty-selector">
+            <button class="diff-btn active" data-difficulty="easy">简单 (9x9)</button>
+            <button class="diff-btn" data-difficulty="medium">中等 (16x16)</button>
+            <button class="diff-btn" data-difficulty="hard">困难 (16x30)</button>
+        </div>
+
+        <div class="game-board" id="gameBoard"></div>
+
+        <div class="game-over" id="gameOver">
+            <h2 id="gameOverTitle">游戏结束!</h2>
+            <p id="gameOverMessage"></p>
+        </div>
+
+        <div class="controls">
+            <button class="btn-restart" id="restartBtn">重新开始</button>
+            <button class="btn-home" id="homeBtn" onclick="goHome()">返回首页</button>
+        </div>
+
+        <div class="instructions">
+            <p>左键点击揭开方块 | 右键点击标记地雷</p>
+            <p>揭开所有非地雷方块即可获胜</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

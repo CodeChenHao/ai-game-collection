@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羊了个羊</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🐑 羊了个羊</h1>
+        
+        <div class="game-info">
+            <div class="info-item">
+                <span class="label">剩余图案</span>
+                <span class="value" id="remaining">0</span>
+            </div>
+            <div class="info-item">
+                <span class="label">已消除</span>
+                <span class="value" id="cleared">0</span>
+            </div>
+        </div>
+
+        <div class="game-board" id="gameBoard"></div>
+
+        <div class="slots-container">
+            <div class="slots" id="slots">
+                <div class="slot"></div>
+                <div class="slot"></div>
+                <div class="slot"></div>
+                <div class="slot"></div>
+                <div class="slot"></div>
+                <div class="slot"></div>
+                <div class="slot"></div>
+            </div>
+        </div>
+
+        <div class="game-over" id="gameOver">
+            <h2 id="gameOverTitle">游戏结束!</h2>
+            <p id="gameOverMessage"></p>
+            <button class="btn-restart" onclick="restartGame()">再来一局</button>
+        </div>
+
+        <div class="controls">
+            <button class="btn-restart" id="restartBtn">重新开始</button>
+            <button class="btn-home" id="homeBtn" onclick="goHome()">返回首页</button>
+        </div>
+
+        <div class="instructions">
+            <p>点击图案放入底部槽位 | 三个相同图案自动消除</p>
+            <p>槽位满了游戏结束 | 消除所有图案获胜</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
